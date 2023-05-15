@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet GPT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-div">
+            <i class="bi bi-lungs-fill"></i>
+            <h1>Health GPT</h1>
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox">
+                    <i class="bi bi-sun-fill hidden" id="sun"></i>
+                    <i class="bi bi-moon-fill" id="moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <form method="POST" onsubmit="gerarDieta()">
+            <div class="form-class">
+                <h2 class="form-title">Gere sua dieta <br> de acordo com seus objetivos!</h2>
+                <input type="text" id="idade" placeholder="Sua idade..." required>
+    
+                <input type="text" id="peso" placeholder="Seu peso..." required>
+
+                <input type="text" id="altura" placeholder="Sua altura..." required>
+    
+                <select id="objetivo" required>
+                    <option disabled selected>Seu objetivo...</option>
+                    <option value="Emagrecimento">Emagrecimento</option>
+                    <option value="Emagrecimento">Ganho de massa muscular</option>
+                    <option value="Emagrecimento">Hipertrofia</option>
+                    <option value="Emagrecimento">Definição</option>
+                </select>
+
+    
+                <button type="submit" id="botao-gerar" class="enabled"><i class="bi bi-arrow-right-circle-fill"></i></button>
+            </div>
+        </form>
+
+        <div class="texto">
+            <div class="texto-class">
+                <p id="texto-dieta" class="texto-dieta">Sua dieta será gerada aqui.</p>
+                <div id="c-loader" class="c-loader hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

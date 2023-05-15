@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-fundo: rgb(219, 219, 219); /* cor de fundo padrão */
+    --cor-texto: rgba(10, 10, 10, 0.699); /* cor do texto padrão */
+}
+
+.dark {
+    --cor-fundo: rgba(0, 0, 0, 0.918); /* cor de fundo padrão */
+    --cor-texto: rgba(219, 219, 219, 0.801); /* cor do texto padrão */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Open Sans';
+    transition: all .5s;
+}
+
+body .dark{
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+header{
+    width: 85vw;
+    margin: auto;
+}
+
+.header-div{
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bi{
+    cursor: pointer;
+}
+
+.bi-lungs-fill{
+    font-size: 40px;
+    cursor: default;
+}
+
+.bi-sun-fill, .bi-moon-fill{
+    font-size: 40px;
+}
+
+section{
+    min-height: 90vh;
+    width: 100vw;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    min-height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.form-class{
+    min-height: 90%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    margin: auto; 
+    text-align: center;
+}
+
+.form-title{
+    font-size: 40px;
+    margin-bottom: 10%;
+    letter-spacing: 3px;
+}
+
+input[type="text"]{
+    margin-top: 0;
+    margin-bottom: 5%;
+    min-height: 40px;
+    width: 40%;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+}
+
+select{
+    margin-bottom: 5%;
+    min-height: 40px;
+    width: 40%;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+}
+
+
+#botao-gerar{
+    margin-top: 5%;
+    min-height: 45px;
+    width: 40%;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s;
+    font-size: 25px;
+    color: white;
+    border: none;
+}
+
+#botao-gerar:hover{
+    transform: scale(0.95);
+    transition: all .5s;
+}
+
+.texto{
+    min-height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.texto-class{
+    min-height: 90%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin: auto; 
+    text-align: center;
+    overflow-y: auto; /* exibe o scroll vertical */
+}
+
+.texto-dieta{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-right: 10px;
+    color: var(--cor-texto);
+}
+
+.gerando-dieta{
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+
+.erro-gerando-dieta{
+    color: red;
+    font-size: 1.5em;
+}
+
+.dieta-gerada{
+    color: var(--cor-texto);
+    font-size: 0.9em;
+}
+
+.enabled{
+    background: rgb(11, 54, 11);
+}
+
+.disabled{
+    background: rgb(40, 41, 41);
+}
+
+.hidden{
+    display: none;
+}
+
+.c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: rgb(11, 54, 11);;
+    min-height: 20px;
+    width: 20px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1200px){
+    .header-div{
+        font-size: 1.1em;
+    }
+
+    .bi-lungs-fill{
+        font-size: 30px;
+    }
+    
+    .bi-sun-fill, .bi-moon-fill{
+        font-size: 30px;
+    }
+
+    section{
+        min-height: 90vh;
+    }
+    
+    .form-class{
+        min-height: 90%;
+        width: 80%;
+    }
+    
+    .form-title{
+        font-size: 25px;
+    }
+    
+    input[type="text"]{
+        min-height: 40px;
+        width: 60%;
+    }
+    
+    select{
+        margin-bottom: 5%;
+        min-height: 40px;
+        width: 60%;
+    }
+    
+    #botao-gerar{
+        width: 60%;
+    }
+    
+    .texto-class{
+        min-height: 90%;
+        width: 80%;
+    }
+    
+    .texto-dieta{
+        font-size: 1.2em;
+    }
+    
+    .gerando-dieta{
+        font-size: 1.2em;
+    }
+    
+    .erro-gerando-dieta{
+        color: red;
+        font-size: 1.2em;
+    }
+    
+    .dieta-gerada{
+        font-size: 0.8em;
+    }
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 750px){
+
+    header{
+        width: 90vw;
+        margin: auto;
+        position: fixed;
+    }
+
+    .header-div{
+        font-size: 0.9em;
+    }
+
+    .bi-lungs-fill{
+        font-size: 25px;
+    }
+    
+    .bi-sun-fill, .bi-moon-fill{
+        font-size: 25px;
+    }
+
+    section{
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+    }
+
+    form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(255, 174, 0);
+        margin-bottom: 5%;
+    }
+
+    .form-class{
+        min-height: 100%;
+        width: 100%;
+        border: 1px solid rgb(0, 255, 136);
+        padding: 5%;
+    }
+    
+    .form-title{
+        font-size: 20px;
+    }
+    
+    input[type="text"]{
+        min-height: 40px;
+        width: 75%;
+    }
+    
+    select{
+        margin-bottom: 5%;
+        min-height: 40px;
+        width: 75%;
+    }
+    
+    #botao-gerar{
+        width: 75%;
+    }
+    
+    .texto{
+        width: 100%;
+        border: 1px solid rgb(255, 174, 0);
+        margin-bottom: 5%;
+    }
+
+    .texto-class{
+        width: 100%;
+        border: 1px solid rgb(0, 255, 136);
+        padding: 5%;
+    }
+    
+    .texto-dieta{
+        font-size: 1em;
+    }
+    
+    .gerando-dieta{
+        font-size: 1em;
+    }
+    
+    .erro-gerando-dieta{
+        color: red;
+        font-size: 1em;
+    }
+    
+    .dieta-gerada{
+        font-size: 0.8em;
+    }
+  }
