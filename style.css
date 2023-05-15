@@ -291,21 +291,18 @@ select{
         margin-top: 10vh;
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
     }
 
     form{
         width: 100%;
         display: flex;
         align-items: center;
-        border: 1px solid rgb(255, 174, 0);
         margin-bottom: 5%;
     }
 
     .form-class{
         min-height: 100%;
         width: 100%;
-        border: 1px solid rgb(0, 255, 136);
         padding: 5%;
     }
     
@@ -330,13 +327,11 @@ select{
     
     .texto{
         width: 100%;
-        border: 1px solid rgb(255, 174, 0);
         margin-bottom: 5%;
     }
 
     .texto-class{
         width: 100%;
-        border: 1px solid rgb(0, 255, 136);
         padding: 5%;
     }
     
