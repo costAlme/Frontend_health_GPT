@@ -30,7 +30,7 @@ async function gerarDieta() {
     gerandoDieta(span);
 
     try {
-        const response = await fetch("http://localhost:8080/api/v1/diet", {
+        const response = await fetch("http://ec2-54-173-160-218.compute-1.amazonaws.com:8080/api/v1/diet", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
