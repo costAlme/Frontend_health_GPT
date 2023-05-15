@@ -35,8 +35,7 @@ async function gerarDieta() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(body),
-            referrerPolicy: "unsafe_url" 
+            body: JSON.stringify(body)
         });
 
         if (response.ok) {
