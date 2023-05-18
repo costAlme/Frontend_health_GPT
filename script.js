@@ -30,7 +30,7 @@ async function gerarDieta() {
     gerandoDieta(span);
 
     try {
-        const response = await fetch("https://healthgpt.vsportfolio.com.br/api/v1/diet", {
+        const response = await fetch("https://apihealthgpt-production.up.railway.app/api/v1/diet", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ async function gerarDieta() {
         });
 
         if (response.ok) {
-            const data = await (await response.text()).replace(/\n\n/g, "<br> <br>").replace("<br>", "");
+            const data = (await response.text()).replace(/\n\n/g, "<br> <br>").replace("<br>", "");
             dietaGerada(span, data);
             habilitarBotao(botaoGerar);
         } else {
