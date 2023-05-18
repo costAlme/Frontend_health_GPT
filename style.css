@@ -276,15 +276,15 @@ select{
     }
 
     .header-div{
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     .bi-lungs-fill{
-        font-size: 25px;
+        font-size: 20px;
     }
     
     .bi-sun-fill, .bi-moon-fill{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     section{
