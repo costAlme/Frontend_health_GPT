@@ -17,7 +17,7 @@ async function gerarDieta() {
     let altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
     let select = document.getElementById("objetivo");
     let objetivo = select.options[select.selectedIndex].textContent;
-    
+     
     event.preventDefault();
     const body = {
         "idade": idade,
