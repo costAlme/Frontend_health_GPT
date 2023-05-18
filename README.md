@@ -1,6 +1,4 @@
 # Frontend_health_GPT
 Frontend feito com HTML, CSS e Javascript, que consome a REST API que fiz integrada com o ChatGPT.
 
-O API foi deployada na AWS, dentro de uma instãncia EC2 rodando no docker.
-
-Já o front, foi deployado no vercel.
+Meu frontend é bem básico, então não repara muito no código kkkkk foi mais para brincar com o consumo da api rest
