@@ -13,8 +13,8 @@ checkbox.addEventListener('change',  () => {
 
 async function gerarDieta() {
     let idade = document.getElementById("idade").value;
-    let peso = document.getElementById("peso").value;
-    let altura = document.getElementById("altura").value;
+    let peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
+    let altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
     let select = document.getElementById("objetivo");
     let objetivo = select.options[select.selectedIndex].textContent;
     
